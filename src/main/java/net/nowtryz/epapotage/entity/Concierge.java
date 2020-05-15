@@ -34,12 +34,12 @@ public class Concierge {
 
     public void triggerEvent(OnLineBavardEvent event) {
         handlerList.forEach(h -> h.onJoinEvent(event));
-        logger.debug("{} joined the tchat", event.getSource());
+        logger.debug("{} joined the tchat", event.getSource().getUsername());
     }
 
     public void triggerEvent(OffLineBavardEvent event) {
         handlerList.forEach(h -> h.onLeaveEvent(event));
-        logger.debug("{} left the tchat", event.getSource());
+        logger.debug("{} left the tchat", event.getSource().getUsername());
     }
 
     public List<PapotageListener> getHandlerList() {

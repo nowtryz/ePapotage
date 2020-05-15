@@ -16,6 +16,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class BavardWindow extends JFrame implements PapotageListener {
+    private static final Dimension DIMENSION = new Dimension(300, 500);
     private Bavard bavard;
     // Components
     private JTextArea textArea = new JTextArea();
@@ -24,11 +25,12 @@ public class BavardWindow extends JFrame implements PapotageListener {
 
     public BavardWindow(@NotNull Bavard bavard) {
         this.bavard = bavard;
+        this.bavard.connect();
 
         BoxLayout messagesLayout = new BoxLayout(this.messagesPan, BoxLayout.Y_AXIS);
         this.messagesPan.setLayout(messagesLayout);
 
-        this.setSize(new Dimension(300, 500));
+        this.setSize(BavardWindow.DIMENSION);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.addWindowListener(new WindowListener());

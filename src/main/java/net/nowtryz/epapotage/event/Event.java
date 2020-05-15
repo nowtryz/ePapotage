@@ -5,7 +5,7 @@ import net.nowtryz.epapotage.entity.Bavard;
 import java.text.SimpleDateFormat;
 
 public abstract class Event {
-    private static final SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy 'à' HH'h'mm");
+    private static final SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy 'à' HH'h'mm");
 
     protected final long date;
     protected final Bavard source;
