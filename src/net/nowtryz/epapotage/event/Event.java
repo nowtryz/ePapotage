@@ -1,6 +1,6 @@
 package net.nowtryz.epapotage.event;
 
-import net.nowtryz.epapotage.Bavard;
+import net.nowtryz.epapotage.entity.Bavard;
 
 import java.text.SimpleDateFormat;
 
